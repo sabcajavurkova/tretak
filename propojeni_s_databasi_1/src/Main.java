@@ -23,3 +23,4 @@ public class Main {
 }
 
 //pres settiongs stahonut tmodul simplesqlbrowser
+//do result set ulozit a pak do terminalu vypsat obsah tabulky
