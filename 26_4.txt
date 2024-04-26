@@ -1,0 +1,23 @@
+sql prikazy
+vypsat vsechny uzivatele a jejich vypujcene knihy
+
+
+create table vypujcka (
+id_uzivatel int not null,
+id_kniha int not null,
+vypujceno timestamp not null,
+vraceno timestamp,
+CONSTRAINT fk1 FOREIGN KEY (id_uzivatel) references uzivatel(id),
+CONSTRAINT fk2 FOREIGN KEY (id_kniha) references kniha(id)
+);
+
+CREATE TABLE uzivatel (
+    id INTEGER PRIMARY KEY,
+    jmeno VARCHAR NOT NULL UNIQUE
+);
+
+CREATE TABLE kniha (
+    	id INTEGER PRIMARY KEY,
+    	jmeno VARCHAR NOT NULL UNIQUE,
+	autor VARCHAR NOT NULL
+);
